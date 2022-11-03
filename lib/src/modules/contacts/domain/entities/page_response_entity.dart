@@ -13,18 +13,6 @@ class PageResponseEntity<T> {
     required this.data,
   });
 
-  beforePage() {
-    if (currentPage > 1) {
-      currentPage--;
-    }
-  }
-
-  afterPage() {
-    if (currentPage < totalPages) {
-      currentPage++;
-    }
-  }
-
   PageResponseEntity<T> copyWith({
     int? currentPage,
     int? perPage,
